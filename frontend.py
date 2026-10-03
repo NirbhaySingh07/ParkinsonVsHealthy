@@ -34,7 +34,7 @@ if uploaded_file is not None:
                     payload[f"MFCC{i+1}_std"] = float(mfcc_stds[i])
                 
                 # 4. Call the API
-                api_url = "http://localhost:8090/api/v1/predict"
+                api_url = "https://parkinsonvshealthy.onrender.com/api/v1/predict"
                 response = requests.post(api_url, json=payload)
                 
                 # 5. Display the Results
